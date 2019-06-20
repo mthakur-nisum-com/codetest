@@ -1,0 +1,1 @@
+export const getObjectKeys = (param = {}) => Object.keys(param);

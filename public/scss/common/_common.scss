@@ -1,0 +1,108 @@
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+form {
+    & * {
+        outline: none;
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    input[type="text"], input[type="password"], input[type="date"] {
+        border: 1px solid $appFormBorderColor;
+        min-width: 90px;
+        border-radius: $defaultRadius;
+        padding: 10px 5px;
+    }
+
+    select {
+        width: 66%;
+        max-height: 40px;
+        padding: 7px 4px;
+        border-radius: $defaultRadius;
+    }
+
+    .multi-select {
+        width: 66%;
+        padding: 7px 4px;
+        border-radius: $defaultRadius;
+    }
+    span.form-error {
+        color: #cc0000;
+        font-size: 12px;
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 0px;
+
+        &:before {
+            display: inline-block;
+            content: '\0021';
+            border-radius: 14px;
+            padding: 2px 9px;
+            background-color: #cc0000;
+            color: #FFF;
+            margin-right: 3px;
+        }
+    }
+    .form-row {
+        display: flex;
+        justify-content: flex-end;
+        padding: .5em;
+
+        label {
+            padding: .5em 1em .5em 0;
+            flex: 1;
+        }
+
+
+
+        input {
+            flex: 2;
+        }
+
+        .react-datepicker-wrapper {
+            .react-datepicker__input-container {
+                width: 256px;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+
+        textarea {
+            resize: none;
+            outline: none;
+            /* padding: 20px; */
+            flex: 2;
+            border-radius: 15px;
+            padding: 5px 0 0 7px;
+            /* text-align: start; */
+            /* align-content: flex-start; */
+            vertical-align: text-top;
+        }
+    }
+}
+button {
+    border: none;
+    padding: 8px 10px;
+    color: $appFormbuttonColor;
+    border-radius: $defaultRadius;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    &.app-primary-btn {
+        background-color: $appFormbuttonBgColor;
+        border: 0.4px solid $appFormbuttonBgColor;
+
+        &:hover {
+            background-color: $appFormbuttonBgHoverColor;
+        }
+    }
+    &:hover {
+        top: -4px;
+    }
+}
